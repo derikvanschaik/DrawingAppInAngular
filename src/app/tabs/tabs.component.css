@@ -1,0 +1,36 @@
+.tab-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.tab {
+  padding: 10px 14px;
+  background-color: grey;
+  max-width: 100px;
+  min-width: 10px;
+  border: 1px solid #ffffff;
+  display: flex;
+  justify-content: space-between;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  cursor: pointer;
+}
+.active {
+  background-color: black;
+  color: white;
+  border: none;
+}
+.tab-text {
+  width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: white;
+}
+canvas {
+  border: 1px solid black;
+}

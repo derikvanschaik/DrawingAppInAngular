@@ -1,0 +1,21 @@
+<div class="app-container"> 
+    <div>
+        <button (click)="newTab()" id="new-tab-btn">+</button>
+    </div>
+    <div class="tab-container">
+        <div 
+            class="tab" 
+            [class.active] ="i===activeTab"  
+            *ngFor="let tab of tabs; let i = index"
+            (click)="changeTab(i)">   
+            <span class="tab-text">{{tab.title}}</span> 
+            <span class="close" (click)="closeTab(i)">X</span>  
+        </div>
+    </div>
+    <!-- drawing canvas -->
+    <canvas #canvas width="900" height="400"  
+        (mousedown)="handleMouseDown($event)"
+        (mouseup)="handleMouseUp($event)"
+        (mousemove)="handleMouseMove($event)" 
+        ></canvas>
+</div>
